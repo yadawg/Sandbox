@@ -9,16 +9,16 @@ import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 public class Main {
-
     public static void main(String[] args) throws AWTException {
 
         try {
-            turnOffLogging();
-            GlobalScreen.registerNativeHook();
+            // ONE RING TO RULE THEM ALL
         }
         catch (NativeHookException ex) {
             System.err.println("There was a problem registering the native hook.");
             System.err.println(ex.getMessage());
+
+            // AN ADDED COMMENT
 
             System.exit(1);
         }
@@ -35,4 +35,6 @@ public class Main {
         Logger logger = Logger.getLogger(GlobalScreen.class.getPackage().getName());
         logger.setLevel(Level.OFF);
     }
+
+    // ANOTHER ADDED COMMENT
 }
